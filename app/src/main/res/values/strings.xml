@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ex5</string>
+    <string name="intro">this exercise will demonstrate the creation of views and layouts dynamically from the code(instead from XML file)</string>
+    <string name="radioGroup">this layout is prepared beforehand but loaded in run time</string>
+    <string name="r1">Radio1</string>
+    <string name="r2">Radio2</string>
+</resources>
