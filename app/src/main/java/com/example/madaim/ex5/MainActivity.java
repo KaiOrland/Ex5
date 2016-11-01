@@ -6,7 +6,9 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,10 +27,18 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout layout1 = new LinearLayout(this);
         layout1.setOrientation(LinearLayout.VERTICAL);
         layout1.setBackgroundResource(R.drawable.border);
+
         rlp = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, toPixels(200));
         rlp.addRule(RelativeLayout.BELOW, R.id.textView);
         rlp.setMargins(0,toPixels(80),0,0);
         mainLayout.addView(layout1,rlp);
+
+        TextView tv = new TextView(this);//creates new text view
+        tv.setText(R.string.checkBoxIntro);// sets string for text view from strings.xml
+        LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        //llp.addRule(LinearLayout.CENTER_HORIZONTAL);
+        layout1.addView(tv, llp);
+
     }
 
     private int toPixels(int dp) {//converts pixels to dp
