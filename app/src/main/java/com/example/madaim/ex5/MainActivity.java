@@ -29,6 +29,26 @@ public class MainActivity extends AppCompatActivity {
         rlp.addRule(RelativeLayout.BELOW, R.id.textView);
         rlp.setMargins(0,toPixels(80),0,0);
         mainLayout.addView(layout1,rlp);
+        
+        TextView text1 = new TextView(this);
+        text1.setText(R.string.runTime);
+        text1.setWidth(toPixels(400));
+        text1.setHeight(toPixels(100));
+        text1.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+        ((LinearLayout) layout1).addView(text1);
+
+        RadioGroup rd1 = new RadioGroup(this);
+        rd1.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+        ((LinearLayout) layout1).addView(rd1);
+        RadioButton rdb1 = new RadioButton(this);
+        rdb1.setText("first");
+
+        rdb1.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+        ((LinearLayout) layout1).addView(rdb1);
+        RadioButton rdb2 = new RadioButton(this);
+        rdb2.setText("second");
+        rdb2.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+        ((LinearLayout) layout1).addView(rdb2);
     }
 
     private int toPixels(int dp) {//converts pixels to dp
