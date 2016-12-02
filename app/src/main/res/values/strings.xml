@@ -5,4 +5,5 @@
     <string name="r1">Radio1</string>
     <string name="r2">Radio2</string>
     <string name="checkBoxIntro">this layout is totally prepared during run time</string>
+    <string name="runTime">this layout is totaly prepared during run-time</string>
 </resources>
